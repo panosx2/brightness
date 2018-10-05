@@ -2,9 +2,9 @@
 Name=Brightness
 GenericName=Brightness
 Comment=
-Categories=Utility;
+Categories=Utility;System;
 Exec=com.github.panosx2.brightness
-Icon=application-default-icon
+Icon=src/brightness.png
 Terminal=false
 Type=Application
 Keywords=Brightness;Screen;Monitor;Change;Light;Eyes;
