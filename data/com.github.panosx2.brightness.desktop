@@ -2,7 +2,7 @@
 Name=Brightness
 GenericName=Brightness
 Comment=
-Categories=Utility;System;
+Categories=Settings;Utility;System;
 Exec=com.github.panosx2.brightness
 Icon=src/brightness.png
 Terminal=false

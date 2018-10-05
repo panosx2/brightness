@@ -15,7 +15,7 @@ public class Brightness : Gtk.Application {
         window.set_default_size(450,150);
         window.destroy.connect(Gtk.main_quit);
         try {
-        window.icon = new Gdk.Pixbuf.from_file("icon48.png");
+        window.icon = new Gdk.Pixbuf.from_file("brightness.png");
         }
         catch (GLib.Error gl) { }
         window.window_position = WindowPosition.CENTER;
