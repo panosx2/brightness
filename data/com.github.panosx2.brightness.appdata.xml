@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018 Your Name <panosp.dev@gmail.com> -->
+<component type="desktop">
+  <id>com.github.panosx2.brightness</id>
+  <metadata_license>CC0</metadata_license>
+  <name>Brightness</name>
+  <summary></summary>
+  <description>
+    <p>Now you can change screen's brightness</p>
+  </description>
+<!--
+<custom>
+     <value key="x-appcenter-color-primary">#603461</value>
+     <value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>
+     <value key="x-appcenter-suggested-price">5</value>
+  </custom>
+-->
+</component>
