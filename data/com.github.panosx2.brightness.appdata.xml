@@ -6,7 +6,7 @@
   <project_license>GPL-3.0</project_license>
   <name>Brightness</name>
   <developer_name>Panos P.</developer_name>
-  <screenshot>screenshot.png</screenshot>
+  <x-screenshot>screenshot.png</x-screenshot>
   <summary>Change screen's brightness</summary>
   <description>
     <p>Now you can change screen's brightness!</p>
