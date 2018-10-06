@@ -8,4 +8,4 @@ Icon=src/brightness.png
 Terminal=false
 Type=Application
 Keywords=Brightness;Screen;Monitor;Change;Light;Eyes;
-Name[en_US]=com.github.panosx2.brightness
+Name[en_US]=Brightness
