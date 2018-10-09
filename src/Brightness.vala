@@ -19,24 +19,24 @@
 * Authored by: Panos P. <panosp.dev@gmail.com>
 */
 
-using Gtk;
-
-namespace Brightness { public class Brightness : Gtk.Application {
+namespace Gtk { public class Brightness : Gtk.Application {
     public Brightness () { Object (application_id: "com.github.panosx2.brightness",flags: ApplicationFlags.FLAGS_NONE); }
     protected override void activate () {
         var window = new Gtk.ApplicationWindow(this);
         window.title = "Brightness";
-        window.set_default_size(450,130);
+        window.set_resizable(false);
         window.destroy.connect(Gtk.main_quit);
         window.window_position = WindowPosition.CENTER;
-        window.border_width = 7;
-        try { window.set_icon(new Gdk.Pixbuf.from_file("icons/64/com.github.panosx2.brightness.png")); } catch (GLib.Error ge) {}
+        window.border_width = 20;
+        //try { window.set_icon(new Gdk.Pixbuf.from_file("/icons/64/com.github.panosx2.brightness.png")); } catch (GLib.Error ge) {}
         string current;
         try { GLib.Process.spawn_command_line_sync("sh -c \"xrandr --verbose | grep -m 1 -i brightness | cut -f2 -d ' '\"",out current); } catch (SpawnError se) { current = "100"; }
         string names;
         try { GLib.Process.spawn_command_line_sync("sh -c \"xrandr | grep ' connected ' | awk '{ print$1 }'\"",out names); } catch (SpawnError se) { names = ""; }
         string[] lines = names.split("\n");
         var slider = new Scale.with_range(Orientation.HORIZONTAL, 50, 100, 1);
+        slider.valign = Align.CENTER;
+        slider.set_size_request(380,50);
         slider.adjustment.value = double.parse(current)*100;
         slider.adjustment.value_changed.connect (() => {
         try {
