@@ -28,10 +28,8 @@ namespace Gtk { public class Brightness : Gtk.Application {
         window.destroy.connect(Gtk.main_quit);
         window.window_position = WindowPosition.CENTER;
         window.border_width = 20;
-        //try { window.set_icon(new Gdk.Pixbuf.from_file("/icons/64/com.github.panosx2.brightness.png")); } catch (GLib.Error ge) {}
-        string current;
+        string current,names;
         try { GLib.Process.spawn_command_line_sync("sh -c \"xrandr --verbose | grep -m 1 -i brightness | cut -f2 -d ' '\"",out current); } catch (SpawnError se) { current = "100"; }
-        string names;
         try { GLib.Process.spawn_command_line_sync("sh -c \"xrandr | grep ' connected ' | awk '{ print$1 }'\"",out names); } catch (SpawnError se) { names = ""; }
         string[] lines = names.split("\n");
         var slider = new Scale.with_range(Orientation.HORIZONTAL, 50, 100, 1);
@@ -45,5 +43,6 @@ namespace Gtk { public class Brightness : Gtk.Application {
         catch (SpawnError se) {}});
         window.add(slider);
         window.show_all();}
+
     public static int main(string[] args) {return new Brightness().run (args);}
 }}
