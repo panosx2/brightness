@@ -7,16 +7,16 @@
  Instead of adjusting the backlight, this app uses `xrandr` to change the brightness of the image displayed on your screen. This can be useful for displays without an adjustable backlight, displays with a too-bright minimum backlight, or OLED displays.
 
  ## Install from AppCenter
- On elementaryOS simply install Dimer Switch from AppCenter:
+ On elementaryOS simply install Dimmer Switch from AppCenter:
  <p align="center">
    <a href="https://appcenter.elementary.io/com.github.panosx2.brightness">
      <img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter">
    </a>
  </p>
 
- ### OR
+ ### or
 
- ## Build it and Install it with Meson
+ ## Build and Install with Meson
  :)
 
  ## Credits
