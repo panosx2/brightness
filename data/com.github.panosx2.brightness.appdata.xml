@@ -4,7 +4,7 @@
   <id>com.github.panosx2.brightness</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0</project_license>
-  <name>Brightness</name>
+  <name>Dimmer Switch</name>
   <developer_name>Panos P.</developer_name>
   <screenshots>
     <screenshot>
@@ -13,7 +13,7 @@
   </screenshots>
   <summary>Change screen's brightness</summary>
   <description>
-    <p>Now you can change screen's brightness!</p>
+    <p>Instead of adjusting the backlight, this app uses `xrandr` to change the brightness of the image displayed on your screen. This can be useful for displays without an adjustable backlight, displays with a too-bright minimum backlight, or OLED displays.</p>
   </description>
 <custom>
      <!--<value key="x-appcenter-color-primary">#000000</value>-->
