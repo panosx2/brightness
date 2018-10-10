@@ -1,6 +1,6 @@
  # Dimmer Switch
 
- <i>Brightness App for Linux, written in Vala</i>
+ <i>Brightness Adjustment for Linux, written in Vala</i>
 
  ![Screenshot](data/screenshot.png)
 

@@ -12,4 +12,4 @@ Standards-Version: 4.1.1
 Package: com.github.panosx2.brightness
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Brightness App for Linux, written in Vala
+Description: Brightness Adjustment for Linux
