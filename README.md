@@ -1,5 +1,3 @@
- ![Icon](icons/128/com.github.panosx2.brightness.png)
-
  # Dimmer Switch
 
  <i>Brightness App for Linux, written in Vala</i>
