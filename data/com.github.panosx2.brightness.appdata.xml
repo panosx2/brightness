@@ -16,8 +16,6 @@
     <p>Instead of adjusting the backlight, this app uses `xrandr` to change the brightness of the image displayed on your screen. This can be useful for displays without an adjustable backlight, displays with a too-bright minimum backlight, or OLED displays.</p>
   </description>
 <custom>
-     <!--<value key="x-appcenter-color-primary">#000000</value>-->
-     <!--<value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>-->
      <value key="x-appcenter-suggested-price">2</value>
   </custom>
 </component>
