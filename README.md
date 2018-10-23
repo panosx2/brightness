@@ -1,5 +1,5 @@
  <p align="center">
-    <img src="https://github.com/panosx2/brightness/master/icons/128/com.github.panosx2.brightness.png" alt="logo"> <br>
+    <img src="https://github.com/panosx2/brightness/blob/master/icons/128/com.github.panosx2.brightness.png" alt="logo"> <br>
 </p>
 
  <div>
@@ -8,7 +8,7 @@
 </div>
 
 <p align="center">
-    <img src="https://github.com/panosx2/brightness/master/data/screenshot.png" alt="Screenshot"> <br>
+    <img src="https://github.com/panosx2/brightness/blob/master/data/screenshot.png" alt="Screenshot"> <br>
 </p>
 
  Instead of adjusting the backlight, this app uses `xrandr` to change the brightness of the image displayed on your screen. This can be useful for displays without an adjustable backlight, displays with a too-bright minimum backlight, or OLED displays.
