@@ -1,8 +1,15 @@
- # Dimmer Switch
+ <p align="center">
+    <img src="https://github.com/panosx2/brightness/blob/deb-packaging-juno/icons/128/com.github.panosx2.brightness.png" alt="logo"> <br>
+</p>
 
- <i>Brightness Adjustment for Linux, written in Vala</i>
+ <div>
+  <h1 align="center">Dimmer Switch</h1>
+  <h3 align="center"><i>Brightness Adjustment for Linux, written in Vala</i></h3>
+</div>
 
- ![Screenshot](data/screenshot.png)
+<p align="center">
+    <img src="https://github.com/panosx2/brightness/blob/deb-packaging-juno/data/screenshot.png" alt="Screenshot"> <br>
+</p>
 
  Instead of adjusting the backlight, this app uses `xrandr` to change the brightness of the image displayed on your screen. This can be useful for displays without an adjustable backlight, displays with a too-bright minimum backlight, or OLED displays.
 
