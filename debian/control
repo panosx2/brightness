@@ -2,11 +2,11 @@ Source: com.github.panosx2.brightness
 Section: x11
 Priority: extra
 Maintainer: Panos P. <panosp.dev@gmail.com>
-Build-Depends: debhelper (>= 10.5.1),
+Build-Depends: debhelper (>= 9),
                gettext,
                libgtk-3-dev,
                meson,
-               valac (>= 0.16.0)
+               valac (>= 0.16)
 Standards-Version: 4.1.1
 
 Package: com.github.panosx2.brightness
