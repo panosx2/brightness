@@ -12,5 +12,5 @@ Standards-Version: 4.1.1
 
 Package: com.github.panosx2.brightness
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, xrandr
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Brightness Adjustment
