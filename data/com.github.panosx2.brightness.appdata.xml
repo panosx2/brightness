@@ -3,9 +3,11 @@
 <component type="desktop">
   <id>com.github.panosx2.brightness</id>
   <metadata_license>CC0</metadata_license>
-  <project_license>GPL-3.0</project_license>
-  <name>Dimmer Switch</name>
+  <project_license>GPL-3.0+</project_license>
+  <name>Dimmer</name>
   <developer_name>Panos P.</developer_name>
+  <url type="homepage">https://github.com/panosx2/brightness/</url>
+  <url type="bugtracker">https://github.com/panosx2/brightness/issues</url>
   <screenshots>
     <screenshot>
       <image>https://raw.githubusercontent.com/panosx2/brightness/master/data/screenshot.png</image>
