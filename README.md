@@ -4,7 +4,7 @@
 
  <div>
   <h1 align="center">Dimmer</h1>
-  <h3 align="center"><i>Brightness Adjustment, written in Vala</i></h3>
+  <h3 align="center"><i>Brightness Adjustment App, written in Vala</i></h3>
 </div>
 
 <p align="center">
