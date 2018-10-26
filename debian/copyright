@@ -1,5 +1,5 @@
 Format: http://dep.debian.net/deps/dep5
-Upstream-Name: Dimmer Switch
+Upstream-Name: Dimmer
 Source: https://github.com/panosx2/brightness
 
 Files: *
