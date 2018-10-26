@@ -3,8 +3,8 @@
 </p>
 
  <div>
-  <h1 align="center">Dimmer Switch</h1>
-  <h3 align="center"><i>Brightness Adjustment for Linux, written in Vala</i></h3>
+  <h1 align="center">Dimmer</h1>
+  <h3 align="center"><i>Brightness Adjustment, written in Vala</i></h3>
 </div>
 
 <p align="center">
@@ -14,7 +14,7 @@
  Instead of adjusting the backlight, this app uses `xrandr` to change the brightness of the image displayed on your screen. This can be useful for displays without an adjustable backlight, displays with a too-bright minimum backlight, or OLED displays.
 
  ## Install from AppCenter
- On elementaryOS simply install Dimmer Switch from AppCenter:
+ On elementaryOS simply install Dimmer from AppCenter:
  <p align="center">
    <a href="https://appcenter.elementary.io/com.github.panosx2.brightness">
      <img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter">
