@@ -2,7 +2,7 @@
 Name=Dimmer Switch
 GenericName=Dimmer Switch
 Comment=
-Categories=Settings;
+Categories=GTK;System;Utility;
 Exec=com.github.panosx2.brightness
 Icon=com.github.panosx2.brightness
 Terminal=false
