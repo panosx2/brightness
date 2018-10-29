@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2018 Panos P. <panosp.dev@gmail.com> -->
 <component type="desktop">
-  <id>com.github.panosx2.brightness.desktop</id>
+  <id>com.github.panosx2.brightness</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Dimmer</name>
@@ -18,7 +18,9 @@
   <description>
     <p>Instead of adjusting the backlight, this app uses `xrandr` to change the brightness of the image displayed on your screen. This can be useful for displays without an adjustable backlight, displays with a too-bright minimum backlight, or OLED displays.</p>
   </description>
+  <!--
   <custom>
-     <!--<value key="x-appcenter-suggested-price">3</value>-->
+     <value key="x-appcenter-suggested-price">3</value>
   </custom>
+-->
 </component>
