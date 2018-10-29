@@ -25,7 +25,7 @@ namespace Gtk {
 
         protected override void activate () {
             var window = new Gtk.ApplicationWindow(this);
-            window.title = "Dimmer Switch";
+            window.title = "Dimmer";
             window.set_resizable(false);
             window.destroy.connect(Gtk.main_quit);
             window.window_position = WindowPosition.CENTER;
