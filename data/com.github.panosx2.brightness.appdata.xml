@@ -8,6 +8,7 @@
   <developer_name>Panos P.</developer_name>
   <url type="homepage">https://github.com/panosx2/brightness/</url>
   <url type="bugtracker">https://github.com/panosx2/brightness/issues</url>
+  <url type="help">https://github.com/panosx2/brightness/issues</url>
   <screenshots>
     <screenshot>
       <image>https://raw.githubusercontent.com/panosx2/brightness/master/data/screenshot.png</image>
@@ -18,6 +19,6 @@
     <p>Instead of adjusting the backlight, this app uses `xrandr` to change the brightness of the image displayed on your screen. This can be useful for displays without an adjustable backlight, displays with a too-bright minimum backlight, or OLED displays.</p>
   </description>
 <custom>
-     <value key="x-appcenter-suggested-price">2</value>
+     <value key="x-appcenter-suggested-price">3</value>
   </custom>
 </component>
