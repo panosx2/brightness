@@ -1,4 +1,4 @@
-Source: dimmer
+Source: com.github.panosx2.brightness
 Section: x11
 Priority: extra
 Maintainer: Panos P. <panosp.dev@gmail.com>
