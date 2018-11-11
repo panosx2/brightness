@@ -40,7 +40,7 @@
  
  ### Building
  
- `meson build && cd build
+`meson build && cd build
  meson configure -Dprefix=/usr
  ninja`
   
