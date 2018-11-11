@@ -1,6 +1,6 @@
  <p align="center">
     <img src="https://github.com/panosx2/brightness/blob/master/icons/128/com.github.panosx2.brightness.png" alt="logo"> <br>
-</p>
+ </p>
 
  <div>
   <h1 align="center">Dimmer</h1>
@@ -34,15 +34,18 @@
  * meson
  * valac
  
- <p>You can install these by executing this command:</p><br>
+ <p>You can install these by executing this command:</p>
+ 
  `sudo apt install meson valac libgranite-dev libgtk-3-dev gettext debhelper`
  
  ### Building
- `meson build && cd build`
- `meson configure -Dprefix=/usr`
- `ninja`
+ 
+ `meson build && cd build
+ meson configure -Dprefix=/usr
+ ninja`
   
   ### Installing
+  
  `sudo ninja install`
 
  ## Credits
