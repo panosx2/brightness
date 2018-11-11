@@ -34,18 +34,22 @@
  * meson
  * valac
  
- <p>You can install these by executing this command:</p>
+ <p>You can install these by executing the command:</p>
  
  `sudo apt install meson valac libgranite-dev libgtk-3-dev gettext debhelper`
  
+ <br>
  <b>Building</b>
  
-`meson build && cd build
- meson configure -Dprefix=/usr
- ninja`
-  
+`meson build && cd build`
+
+`meson configure -Dprefix=/usr`
+ 
+`ninja`
+
+<br>
 <b>Installing</b>
-  
+
 `sudo ninja install`
 
  ## Credits
