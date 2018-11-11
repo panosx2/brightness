@@ -34,8 +34,8 @@
  * meson
  * valac
  
- You can install these by executing this command:
- `udo apt install meson valac libgranite-dev libgtk-3-dev gettext debhelper`
+ <p>You can install these by executing this command:</p><br>
+ `sudo apt install meson valac libgranite-dev libgtk-3-dev gettext debhelper`
  
  ### Building
  `meson build && cd build`
