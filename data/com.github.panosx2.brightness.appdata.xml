@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2018 Panos P. <panosp.dev@gmail.com> -->
 <component type="desktop">
-  <id>com.github.panosx2.brightness</id>
+  <id>com.github.panosx2.brightness.desktop</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Dimmer</name>
   <developer_name>Panos P.</developer_name>
-  <url type="homepage">https://github.com/panosx2/brightness/</url>
+  <update_contact>panosp.dev@gmail.com</update_contact>
+  <provides>
+    <binary>com.github.panosx2.brightness</binary>
+  </provides>
+  <url type="homepage">https://github.com/panosx2/brightness</url>
   <url type="bugtracker">https://github.com/panosx2/brightness/issues</url>
-  <url type="help">https://github.com/panosx2/brightness/issues</url>
+  <url type="help">https://github.com/panosx2/brightness</url>
   <screenshots>
-    <screenshot>
+    <screenshot type="default">
       <image>https://raw.githubusercontent.com/panosx2/brightness/master/data/screenshot.png</image>
     </screenshot>
   </screenshots>
@@ -18,9 +22,7 @@
   <description>
     <p>Instead of adjusting the backlight, this app uses `xrandr` to change the brightness of the image displayed on your screen. This can be useful for displays without an adjustable backlight, displays with a too-bright minimum backlight, or OLED displays.</p>
   </description>
-  <!--
   <custom>
-     <value key="x-appcenter-suggested-price">3</value>
+     <value key="x-appcenter-suggested-price">2.50</value>
   </custom>
--->
 </component>
