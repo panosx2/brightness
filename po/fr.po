@@ -1,0 +1,58 @@
+# French translations for com.github.panosx2.brightness package
+# Copyright (C) 2019 THE com.github.panosx2.brightness'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.panosx2.brightness package.
+# NathanBnm, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.panosx2.brightness\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-03 00:13+0900\n"
+"PO-Revision-Date: 2019-02-03 13:30+0100\n"
+"Last-Translator: NathanBnm\n"
+"Language-Team: Français\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.panosx2.brightness.appdata.xml.in:7
+#: data/com.github.panosx2.brightness.desktop.in:3
+msgid "Dimmer"
+msgstr "Dimmer"
+
+#: data/com.github.panosx2.brightness.appdata.xml.in:8
+msgid "Panos P."
+msgstr "Panos P."
+
+#: data/com.github.panosx2.brightness.appdata.xml.in:21
+msgid "Change screen's brightness"
+msgstr "Modifie la luminosité de l'écran"
+
+#: data/com.github.panosx2.brightness.appdata.xml.in:23
+msgid ""
+"Instead of adjusting the backlight, this app uses `xrandr` to change the "
+"brightness of the image displayed on your screen. This can be useful for "
+"displays without an adjustable backlight, displays with a too-bright minimum "
+"backlight, or OLED displays."
+msgstr ""
+"Au lieu de régler le rétroéclairage, cette application utilise `xrandr' pour changer la "
+"luminosité de l'image affichée sur votre écran. Ceci peut être utile pour "
+"les écrans sans rétroéclairage réglable, les écrans avec un rétroéclairage minimum trop "
+"lumineux ou les écrans OLED."
+
+#: data/com.github.panosx2.brightness.desktop.in:4
+msgid "Brightness Adjustment"
+msgstr "Ajustement de la luminosité"
+
+#: data/com.github.panosx2.brightness.desktop.in:7
+msgid "com.github.panosx2.brightness"
+msgstr "com.github.panosx2.brightness"
+
+#: data/com.github.panosx2.brightness.desktop.in:10
+msgid ""
+"brightness;screen;monitor;change;light;eyes;dimmer;switch;OLED;backlight;"
+"display;xrandr;bright;"
+msgstr "luminosité;écran;moniteur;modifier;lumière;yeux;dimmer;interrupteur;OLED;rétro-éclairage;"
+"affichage;xrandr;lumineux;"
