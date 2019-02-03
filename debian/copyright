@@ -3,7 +3,7 @@ Upstream-Name: Dimmer
 Source: https://github.com/panosx2/brightness
 
 Files: *
-Copyright: 2018 Panos P. <panosp.dev@gmail.com>
+Copyright: 2018-2019 Panos P. <panosp.dev@gmail.com>
 License: GPL-3.0+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
