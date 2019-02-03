@@ -1,4 +1,4 @@
-com.github.panosx2.brightness (1.4.22) precise; urgency=low
+com.github.panosx2.brightness (1.4.23) precise; urgency=low
 
   * added support for multiple monitors with individual brightness
   * added bigger range of brightness
