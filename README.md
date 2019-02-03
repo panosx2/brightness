@@ -31,6 +31,7 @@
  * gettext
  * libgranite-dev
  * libgtk-3-dev
+ * libappindicator
  * meson
  * valac
  
