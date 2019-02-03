@@ -1,5 +1,12 @@
     project('com.github.panosx2.brightness', 'vala', 'c')
 
+    i18n = import('i18n')
+
+    add_project_arguments(
+        '-DGETTEXT=PACKAGE="@0@"'.format(meson.project_name()),
+        language: 'c'
+    )
+
     executable(
         meson.project_name(),
         'src/Dimmer.vala',
@@ -9,13 +16,19 @@
         install: true
     )
 
-    install_data(
-        join_paths('data', meson.project_name() + '.desktop'),
+    subdir('po')
+
+    i18n.merge_file(
+        input: join_paths('data', meson.project_name() + '.desktop.in'),
+        output: meson.project_name() + '.desktop',
+        po_dir: join_paths(meson.source_root(), 'po'),
         install_dir: join_paths(get_option('datadir'), 'applications')
     )
 
-    install_data(
-        join_paths('data', meson.project_name() + '.appdata.xml'),
+    i18n.merge_file(
+        input: join_paths('data', meson.project_name() + '.appdata.xml.in'),
+        output: meson.project_name() + '.appdata.xml',
+        po_dir: join_paths(meson.source_root(), 'po'),
         install_dir: join_paths(get_option('datadir'), 'metainfo')
     )
 
