@@ -11,7 +11,7 @@
     <img src="https://github.com/panosx2/brightness/blob/master/data/screenshot.png" alt="Screenshot"> <br>
 </p>
 
- Instead of adjusting the backlight, this app uses `xrandr` to change the brightness of the image displayed on your screen. This can be useful for displays without an adjustable backlight, displays with a too-bright minimum backlight, or OLED displays.
+ Instead of adjusting the backlight, this app uses `xrandr` to change the brightness of the image displayed on your screen. This can be useful for displays without an adjustable backlight, displays with a too-bright minimum, or too dark maximum backlight, or OLED displays. Setups with multipe displays (maximum 4 displays) can also be adjusted with different brightness levels.
 
  ## Install from AppCenter 
  On elementaryOS simply install Dimmer from AppCenter:
