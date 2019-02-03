@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 9),
                gettext,
                libgranite-dev,
                libgtk-3-dev,
-               libappindicator,
+               libappindicator3-1,
                meson,
                valac
                
