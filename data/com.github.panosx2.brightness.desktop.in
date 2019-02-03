@@ -6,4 +6,4 @@ Exec=com.github.panosx2.brightness
 Icon=com.github.panosx2.brightness
 Terminal=false
 Type=Application
-Keywords=brightness;screen;monitor;change;light;eyes;dimmer;switch;OLED;backlight;display;xrandr;bright;
+Keywords=brightness;screen;monitor;change;light;eyes;dimmer;switch;OLED;backlight;display;xrandr;bright;multipe-monitors;dual-monitors;
