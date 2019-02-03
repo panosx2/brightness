@@ -34,9 +34,9 @@ public class Dimmer : Indicator {
     public static bool previousOpened;
 
     public static int main(string[] args) {
-		Gtk.init(ref args);
+	Gtk.init(ref args);
 		
-		previousOpened = false;
+	previousOpened = false;
 
         createWindow();
 
