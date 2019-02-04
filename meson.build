@@ -1,11 +1,11 @@
     project('com.github.panosx2.brightness', 'vala', 'c')
 
-    i18n = import('i18n')
-
     add_project_arguments(
         '-DGETTEXT=PACKAGE="@0@"'.format(meson.project_name()),
         language: 'c'
     )
+    
+    i18n = import('i18n')
 
     executable(
         meson.project_name(),
