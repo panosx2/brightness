@@ -13,7 +13,22 @@ Build-Depends: debhelper (>= 9),
                gir1.2-appindicator3-0.1,
                indicator-application,
                meson,
-               valac
+               valac,
+               at-spi2-core,
+               colord,
+               contractor,
+               curl,
+               krb5-locales,
+               libasprintf-dev, 
+               libgettextpo-dev, 
+               libmail-sendmail-perl,
+               libtxc-dxtn-s2tc0,
+               libx11-doc, 
+               lynx-cur, 
+               wget,
+               wingpanel-indicator-ayatana,
+               xdg-user-dirs,
+               xml-core
                
 Standards-Version: 4.1.1
 Package: com.github.panosx2.brightness
