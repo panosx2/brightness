@@ -20,10 +20,7 @@
 */
 
 public class Dimmer.Indicator : Wingpanel.Indicator {
-    private Widgets.DisplayWidget? display_widget = null;
-
-    private Gtk.Grid main_grid;
-    
+    private Wingpanel.Widgets.OverlayIcon display_widget;    
     private Gtk.Box vboxMain;
     
     public Indicator () {
@@ -35,20 +32,19 @@ public class Dimmer.Indicator : Wingpanel.Indicator {
     }
     
     construct {
+        display_widget = new Wingpanel.Widgets.OverlayIcon ("com.github.panosx2.brightness");
+        
         this.visible = true;
-        display_widget = Widgets.DisplayWidget.take();
+        
+        vboxMain = new Widgets.DisplayWidget().take();
     }
     
     public override Gtk.Widget get_display_widget () {
-        if (display_widget == null) {
-            display_widget = Widgets.DisplayWidget.take();
-        }
-        
         return display_widget;
     }
 
     public override Gtk.Widget? get_widget () {
-        return null;
+        return vboxMain;
     }
     
     public override void opened () {
