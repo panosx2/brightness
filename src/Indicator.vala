@@ -26,8 +26,8 @@ public class Dimmer.Indicator : Wingpanel.Indicator {
     public Indicator () {
         Object (
             code_name : "dimmer",
-            display_name : _("Dimmer"),
-            description: _("Change brightness")
+            display_name : "Dimmer",
+            description: "Change brightness"
         );
     }
     
