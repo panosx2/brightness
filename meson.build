@@ -9,10 +9,11 @@
 
     executable(
         meson.project_name(),
-        'src/Dimmer.vala',
+        'src/Indicator.vala',
+        'src/Widgets/DisplayWidget.vala',
         dependencies: [
             dependency('gtk+-3.0'),
-            dependency('appindicator3-0.1')
+            dependency('wingpanel-2.0')
         ],
         install: true
     )
