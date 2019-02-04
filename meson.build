@@ -12,6 +12,7 @@
         'src/Dimmer.vala',
         dependencies: [
             dependency('gtk+-3.0')
+            dependency('appindicator3-0.1')
         ],
         install: true
     )
