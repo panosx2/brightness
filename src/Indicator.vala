@@ -41,21 +41,14 @@ public class Dimmer.Indicator : Wingpanel.Indicator {
     
     public override Gtk.Widget get_display_widget () {
         if (display_widget == null) {
-            display_widget = new DisplayWidget ();
+            display_widget = Widgets.DisplayWidget.take();
         }
         
         return display_widget;
     }
 
     public override Gtk.Widget? get_widget () {
-        if (main_grid == null) {
-            main_grid = new Gtk.Grid ();
-            main_grid.set_orientation (Gtk.Orientation.VERTICAL);
-
-            main_grid.add (vboxMain);
-        }
-
-        return main_grid;
+        return null;
     }
     
     public override void opened () {
