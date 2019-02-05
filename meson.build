@@ -1,7 +1,7 @@
     project('com.github.panosx2.brightness', 'vala', 'c')
 
     add_project_arguments(
-        '-DGETTEXT=PACKAGE="@0@"'.format(meson.project_name()),
+        '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()),
         language: 'c'
     )
     
