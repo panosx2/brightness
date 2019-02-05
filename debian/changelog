@@ -1,12 +1,9 @@
-com.github.panosx2.brightness (1.4.25) precise; urgency=low
+com.github.panosx2.brightness (1.4.26) precise; urgency=low
 
   * added support for multiple monitors with individual brightness
   * added bigger range of brightness
-  * update README
-  * update Appcenter profile
-  * update screenshot
 
- -- Panos P. <panosp.dev@gmail.com>  Sun, 03 Feb 2019 7:45:23 +0300
+ -- Panos P. <panosp.dev@gmail.com>  Mon, 04 Feb 2019 9:45:23 +0300
 
 com.github.panosx2.brightness (1.4.19) precise; urgency=low
 
