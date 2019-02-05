@@ -9,25 +9,11 @@
 
     executable(
         meson.project_name(),
-        'src/Indicator.vala',
-        'src/Widgets/DisplayWidget.vala',
+        'src/Dimmer.vala',
         dependencies: [
-            dependency('gtk+-3.0'),
-            dependency('wingpanel-2.0')
+            dependency('gtk+-3.0')
         ],
         install: true
-    )
-    
-    shared_module(
-        'dimmer',
-        'src/Indicator.vala',
-        'src/Widgets/DisplayWidget.vala',
-        dependencies: [
-            dependency('wingpanel-2.0')
-        ],
-        install: true,
-        # install_dir : wingpanel.get_pkgconfig_variable('indicatorsdir'), <- installs to /usr/local/
-        install_dir : '/usr/lib/x86_64-linux-gnu/wingpanel/'
     )
 
     subdir('po')
