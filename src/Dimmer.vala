@@ -20,6 +20,7 @@
 */
 
 using Gtk;
+using Gee;
 
 public class Dimmer :  Gtk.Application {
     public static Gtk.Scale slider;
@@ -35,7 +36,7 @@ public class Dimmer :  Gtk.Application {
     
     public static Switch switcher;
     
-    public static string[] lines;
+    public static ArrayList<string> lines;
     public static string[] monitors;
     
      public Dimmer () {
@@ -77,9 +78,17 @@ public class Dimmer :  Gtk.Application {
                 GLib.Process.spawn_command_line_sync("sh -c \"xrandr | grep ' connected ' | awk '{ print$1 }'\"", out names);
         } catch (SpawnError se) { names = ""; }
 
-        lines = names.split("\n");
+        string[] tempLines = names.split("\n");
+       
+        lines = new ArrayList<string>();
         
-        if (lines.length > 1) {
+        for (int i = 0; i < tempLines.length; i++) if (tempLines[i] != "") lines.add(tempLines[i]);
+        
+        //this is my main slider
+        slider = new Scale.with_range(Orientation.HORIZONTAL, 40, 150, 1);
+        slider.set_size_request(380, 50);
+        
+        if (lines.size > 1) {
             var hboxAll = new Box (Orientation.HORIZONTAL, 0);
             hboxAll.homogeneous = false;
         
@@ -94,35 +103,15 @@ public class Dimmer :  Gtk.Application {
                     slider.visible = true; 
                     vboxInd.visible = false;
                     
-                    string prevValue;
-                    
-                    if (FileUtils.test(".dimmer_all_monitors.txt", GLib.FileTest.EXISTS) == true) {
-                        try {
-                            FileUtils.get_contents(".dimmer_all_monitors.txt", out prevValue);
-                        }
-                        catch(Error e) {
-                            stderr.printf ("Error: %s\n", e.message);
-                        }
-                    }
-                    else {
-                        prevValue = "1.00"; //default
-                    }
-                    
-                    slider.adjustment.value = double.parse(prevValue) * 100;
-                            
-                    string edited = prevValue;
-                        
-                    try {    
-                        for (int i = 0; i < lines.length - 1; i++) {
-                            GLib.Process.spawn_command_line_async("xrandr --output " + lines[i] + " --brightness " + edited);
-                        }
-                    } catch (SpawnError se) {}
+                    //initialization
+                    setValueForAll();
                 }
                 else {
                     slider.visible = false;
                     vboxInd.visible = true;
                     
-                    setValues();
+                    //initialization
+                    setValuesForEveryMonitor();
                 }
             });
             switcher.set_margin_bottom(30);
@@ -132,14 +121,16 @@ public class Dimmer :  Gtk.Application {
             
             vboxMain.add(hboxAll);
         }
+        else { //if only one exists
+            //initialization
+            setValueForAll();
+        }
         
         monitors = {"", "", "", ""};
         
-        for (int i = 0; i < lines.length - 1; i++) {
-            monitors[i] = lines[i];
-        }
+        for (int i = 0; i < lines.size; i++) monitors[i] = lines.get(i);
         
-        if (lines.length-1 > 1) {
+        if (lines.size > 1) {
             //slider1
             label1 = new Label(monitors[0]);
             label1.halign = Align.START;
@@ -226,27 +217,21 @@ public class Dimmer :  Gtk.Application {
                         else slider4.tooltip_text = "";
                 } catch (SpawnError se) {}
             });
-        }
-        
-        //set the values at start
-        if (lines.length > 1) {
-            setValues();
+            
+            //set the values at start (when more than 1 exists)
+            setValuesForEveryMonitor();
         
             if (slider1.get_value() != slider2.get_value()) {
                 switcher.set_active(false);
             }
         }
             
-        //slider for all monitors
-        slider = new Scale.with_range(Orientation.HORIZONTAL, 40, 150, 1);
-        slider.set_size_request(380, 50);
+        //action for main slider
         slider.adjustment.value_changed.connect (() => {  
             try {
                     string edited = (slider.adjustment.value / 100).to_string();
 
-                    for (int i = 0; i < lines.length - 1; i++) {
-                        GLib.Process.spawn_command_line_async("xrandr --output " + lines[i] + " --brightness " + edited);
-                    }
+                    for (int i = 0; i < lines.size; i++) GLib.Process.spawn_command_line_async("xrandr --output " + lines.get(i) + " --brightness " + edited);
 
                     saveValue(".dimmer_all_monitors.txt", edited);
 
@@ -256,10 +241,11 @@ public class Dimmer :  Gtk.Application {
             } catch (SpawnError se) {}
         });
         
+        //.v.positioning
         vboxMain.add(slider);
     
-        if (lines.length > 1) {
-            for (int i = 0; i < lines.length - 1; i++) {
+        if (lines.size > 1) {
+            for (int i = 0; i < lines.size; i++) {
                 if (i == 0) {
                     vboxInd.add(label1);
                     vboxInd.add(slider1);
@@ -285,9 +271,40 @@ public class Dimmer :  Gtk.Application {
         
         window.show_all();
     }
+
+    //also, if only 1 monitor exists    
+    private static void setValueForAll() {
+        string prevValue;
+                    
+        if (FileUtils.test(".dimmer_all_monitors.txt", GLib.FileTest.EXISTS) == true) {
+            try {
+                FileUtils.get_contents(".dimmer_all_monitors.txt", out prevValue);
+            }
+            catch(Error e) {
+                prevValue = "1.00";
+                stderr.printf ("Error: %s\n", e.message);
+            }
+        }
+        else {
+            prevValue = "1.00"; //default
+        }
+        
+        double dprevValue = double.parse(prevValue);
+        if (dprevValue<0.4) dprevValue = 0.4;
+        if (dprevValue>1.5) dprevValue = 1.5;
+        
+        slider.adjustment.value = dprevValue * 100;
+                
+        string edited = dprevValue.to_string();
+            
+        try {    
+            for (int i = 0; i < lines.size; i++) GLib.Process.spawn_command_line_async("xrandr --output " + lines.get(i) + " --brightness " + edited);
+        } catch (SpawnError se) {}
+    }
     
-    private static void setValues() {
-        for (int i = 0; i < lines.length - 1; i++) {
+    //if more than 1 monitor exists
+    private static void setValuesForEveryMonitor() {
+        for (int i = 0; i < lines.size; i++) {
             string prevValue;
             
             if (monitors[i] != "") {
@@ -296,6 +313,7 @@ public class Dimmer :  Gtk.Application {
                         FileUtils.get_contents(".dimmer_"+monitors[i]+".txt", out prevValue);
                     }
                     catch(Error e) {
+                        prevValue = "1.00";
                         stderr.printf ("Error: %s\n", e.message);
                     }
                 }
@@ -303,12 +321,16 @@ public class Dimmer :  Gtk.Application {
                     prevValue = "1.00"; //default
                 }
                 
-                string edited = prevValue;
+                double dprevValue = double.parse(prevValue);
+                if (dprevValue < 0.4) dprevValue = 0.4;
+                if (dprevValue > 1.5) dprevValue = 1.5;
                 
-                if (i==0) slider1.adjustment.value = double.parse(prevValue) * 100;
-                else if (i==1) slider2.adjustment.value = double.parse(prevValue) * 100;
-                else if (i==2) slider3.adjustment.value = double.parse(prevValue) * 100;
-                else if (i==3) slider4.adjustment.value = double.parse(prevValue) * 100;
+                if (i==0) slider1.adjustment.value = dprevValue * 100;
+                else if (i==1) slider2.adjustment.value = dprevValue * 100;
+                else if (i==2) slider3.adjustment.value = dprevValue * 100;
+                else if (i==3) slider4.adjustment.value = dprevValue * 100;
+                
+                string edited = dprevValue.to_string();
                 
                 try {
                     GLib.Process.spawn_command_line_async("xrandr --output " + monitors[i] + " --brightness " + edited);
