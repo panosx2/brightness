@@ -1,3 +1,7 @@
+ [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/panosx2/brightness/blob/master/LICENSE)
+ [![Build Status](https://travis-ci.com/panosx2/brightness.svg?branch=master)](https://travis-ci.com/panosx2/brightness)
+ [![Donate](https://img.shields.io/badge/PayPal-Donate-gray.svg?style=flat&logo=paypal&colorA=0071bb&logoColor=fff)](https://www.paypal.me/PanagiotisPanos)
+ 
  <p align="center">
     <img src="https://github.com/panosx2/brightness/blob/master/icons/128/com.github.panosx2.brightness.png" alt="logo"> <br>
  </p>
@@ -42,11 +46,11 @@
  <br>
  <b>Building</b>
  
-`meson build && cd build`
-
-`meson configure -Dprefix=/usr`
- 
-`ninja`
+```
+meson build && cd build
+meson configure -Dprefix=/usr`
+ninja
+```
 
 <br>
 <b>Installing</b>
