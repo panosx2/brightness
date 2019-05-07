@@ -31,12 +31,13 @@
  * gettext
  * libgranite-dev
  * libgtk-3-dev
+ * libgee-0.8-dev
  * meson
  * valac
  
  <p>You can install these by executing the command:</p>
  
- `sudo apt install meson valac libgranite-dev libgtk-3-dev gettext debhelper`
+ `sudo apt install meson valac libgranite-dev libgtk-3-dev libgee-0.8-dev gettext debhelper`
  
  <br>
  <b>Building</b>
