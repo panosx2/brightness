@@ -28,8 +28,6 @@
     <category>Utility</category>
     <category>System</category>
   </categories>
-  <custom>
-  </custom>
   <releases>
     <release version="1.4.28" date="2019-05-07" urgency="medium">
       <description>
