@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.panosx2.brightness\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-03 00:13+0900\n"
-"PO-Revision-Date: 2019-02-03 13:30+0100\n"
+"POT-Creation-Date: 2019-05-07 19:20+0200\n"
+"PO-Revision-Date: 2019-05-07 19:15+0200\n"
 "Last-Translator: NathanBnm\n"
 "Language-Team: Français\n"
 "Language: fr\n"
@@ -26,21 +26,33 @@ msgstr "Dimmer"
 msgid "Panos P."
 msgstr "Panos P."
 
-#: data/com.github.panosx2.brightness.appdata.xml.in:21
+#: data/com.github.panosx2.brightness.appdata.xml.in:22
 msgid "Change screen's brightness"
 msgstr "Modifie la luminosité de l'écran"
 
-#: data/com.github.panosx2.brightness.appdata.xml.in:23
+#: data/com.github.panosx2.brightness.appdata.xml.in:24
 msgid ""
 "Instead of adjusting the backlight, this app uses `xrandr` to change the "
 "brightness of the image displayed on your screen. This can be useful for "
-"displays without an adjustable backlight, displays with a too-bright minimum "
-"backlight, or OLED displays."
+"displays without an adjustable backlight, displays with a too-bright "
+"minimum, or too-dark maximum backlight, or OLED displays. Setups with "
+"multipe displays (maximum 4 displays) can also be adjusted with different "
+"brightness levels."
 msgstr ""
-"Au lieu de régler le rétroéclairage, cette application utilise `xrandr' pour changer la "
-"luminosité de l'image affichée sur votre écran. Ceci peut être utile pour "
-"les écrans sans rétroéclairage réglable, les écrans avec un rétroéclairage minimum trop "
-"lumineux ou les écrans OLED."
+"Au lieu de régler le rétroéclairage, cette application utilise « xrandr » "
+"pour modifier la luminosité de l'image affichée sur votre écran. Ceci peut "
+"être utile pour les écrans sans rétroéclairage réglable, les écrans avec un "
+"rétroéclairage minimum trop lumineux ou les écrans OLED. Les configurations "
+"avec écrans multiples(4 écrans maximum) peuvent également être ajustés avec "
+"des niveaux de luminosité différents."
+
+#: data/com.github.panosx2.brightness.appdata.xml.in:35
+msgid "added auto-save for brightness preferences"
+msgstr "Ajout de la sauvegarde automatique des paramètres de luminosité"
+
+#: data/com.github.panosx2.brightness.appdata.xml.in:36
+msgid "small bugs fixed"
+msgstr "Corrections de bugs mineurs"
 
 #: data/com.github.panosx2.brightness.desktop.in:4
 msgid "Brightness Adjustment"
@@ -53,6 +65,7 @@ msgstr "com.github.panosx2.brightness"
 #: data/com.github.panosx2.brightness.desktop.in:10
 msgid ""
 "brightness;screen;monitor;change;light;eyes;dimmer;switch;OLED;backlight;"
-"display;xrandr;bright;"
-msgstr "luminosité;écran;moniteur;modifier;lumière;yeux;dimmer;interrupteur;OLED;rétro-éclairage;"
-"affichage;xrandr;lumineux;"
+"display;xrandr;bright;multipe-monitors;dual-monitors;"
+msgstr ""
+"luminosité;écran;moniteur;modifier;lumière;yeux;dimmer;interrupteur;OLED;"
+"rétro-éclairage;affichage;xrandr;lumineux;multi-écrans;double-écran;"
