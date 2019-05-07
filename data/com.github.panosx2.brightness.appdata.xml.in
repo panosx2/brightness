@@ -23,6 +23,5 @@
     <p>Instead of adjusting the backlight, this app uses `xrandr` to change the brightness of the image displayed on your screen.  This can be useful for displays without an adjustable backlight, displays with a too-bright minimum, or too-dark maximum backlight, or OLED displays. Setups with multipe displays (maximum 4 displays) can also be adjusted with different brightness levels.</p>
   </description>
   <custom>
-     <value key="x-appcenter-suggested-price">2.50</value>
   </custom>
 </component>
