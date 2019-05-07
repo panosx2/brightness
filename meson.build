@@ -11,7 +11,8 @@
         meson.project_name(),
         'src/Dimmer.vala',
         dependencies: [
-            dependency('gtk+-3.0')
+            dependency('gtk+-3.0'),
+            dependency('gee-0.8')
         ],
         install: true
     )
