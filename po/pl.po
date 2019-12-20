@@ -1,0 +1,70 @@
+# Polish translations for Dimmer.
+# This file is distributed under the same license as the com.github.panosx2.brightness.
+# Translated by Michał Nowakowski <nowakowski@offshore.rocks>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.panosx2.brightness\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-07 19:20+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.panosx2.brightness.appdata.xml.in:7
+#: data/com.github.panosx2.brightness.desktop.in:3
+msgid "Dimmer"
+msgstr "Dimmer"
+
+#: data/com.github.panosx2.brightness.appdata.xml.in:8
+msgid "Panos P."
+msgstr "Panos P."
+
+#: data/com.github.panosx2.brightness.appdata.xml.in:22
+msgid "Change screen's brightness"
+msgstr "Zmień jasność ekranu"
+
+#: data/com.github.panosx2.brightness.appdata.xml.in:24
+msgid ""
+"Instead of adjusting the backlight, this app uses `xrandr` to change the "
+"brightness of the image displayed on your screen. This can be useful for "
+"displays without an adjustable backlight, displays with a too-bright "
+"minimum, or too-dark maximum backlight, or OLED displays. Setups with "
+"multipe displays (maximum 4 displays) can also be adjusted with different "
+"brightness levels."
+msgstr ""
+"Zamiast dostosowywać podświetlenie ekranu, apka wykorystuje „xrandr” żeby "
+"zmieniać jasność obrazu wyświetlanego na ekranie. Może to być użyteczne "
+"dla ekranów pozbawionych regulowanego podświetlenia, ekranów ze zbyt jasnym "
+"minimalnym albo zbyt ciemnym maksymalnym podświetleniem, czy OLED-ów. Działa "
+"z wieloma ekranami (maksymalnie czterema), z których każdy może być ustawiony "
+"na inny poziom jasności."
+
+#: data/com.github.panosx2.brightness.appdata.xml.in:35
+msgid "added auto-save for brightness preferences"
+msgstr "Dodano automatyczne zapisywanie ustawień jasności"
+
+#: data/com.github.panosx2.brightness.appdata.xml.in:36
+msgid "small bugs fixed"
+msgstr "Poprawiono drobne błędy"
+
+#: data/com.github.panosx2.brightness.desktop.in:4
+msgid "Brightness Adjustment"
+msgstr "Ustawianie jasności"
+
+#: data/com.github.panosx2.brightness.desktop.in:7
+msgid "com.github.panosx2.brightness"
+msgstr "com.github.panosx2.brightness"
+
+#: data/com.github.panosx2.brightness.desktop.in:10
+msgid ""
+"brightness;screen;monitor;change;light;eyes;dimmer;switch;OLED;backlight;"
+"display;xrandr;bright;multipe-monitors;dual-monitors;"
+msgstr ""
+"jasność;ekran;monitor;zmiana;światło;oczy;przyciemnianie;OLED;podświetlenie;"
+"wyświetlacz;xrandr;jasny;wiele ekranów;dwa ekrany;"
