@@ -49,7 +49,7 @@ msgstr ""
 
 #: data/com.github.panosx2.brightness.appdata.xml.in:35
 msgid "added auto-save for brightness preferences"
-msgstr "Adicionado gravar automaticamente preferências de brilho"
+msgstr "Adicionado o guardar automaticamente para preferências de brilho"
 
 #: data/com.github.panosx2.brightness.appdata.xml.in:36
 msgid "small bugs fixed"
