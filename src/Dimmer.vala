@@ -65,7 +65,7 @@ public class Dimmer :  Gtk.Application {
         string currentBr, /*currentGm,*/ names;
 
         try {
-                GLib.Process.spawn_command_line_sync("sh -c \"xrandr --verbose | grep -m 1 -i brightness | cut -f2 -d ' '\"", out currentBr);
+                GLib.Process.spawn_command_line_sync("sh -c \"flatpak-spawn --host xrandr --verbose | grep -m 1 -i brightness | cut -f2 -d ' '\"", out currentBr);
         } catch (SpawnError se) { currentBr = "100"; }
 
         /*
@@ -75,7 +75,7 @@ public class Dimmer :  Gtk.Application {
         */
 
         try {
-                GLib.Process.spawn_command_line_sync("sh -c \"xrandr | grep ' connected ' | awk '{ print$1 }'\"", out names);
+                GLib.Process.spawn_command_line_sync("sh -c \"flatpak-spawn --host xrandr | grep ' connected ' | awk '{ print$1 }'\"", out names);
         } catch (SpawnError se) { names = ""; }
 
         string[] tempLines = names.split("\n");
@@ -145,7 +145,7 @@ public class Dimmer :  Gtk.Application {
                             //GLib.Process.spawn_command_line_async("xrandr --output " + monitors[0] + " --gamma " + edited + ":" + edited + ":" + edited);
                         //}
                         //else 
-                        GLib.Process.spawn_command_line_async("xrandr --output " + monitors[0] + " --brightness " + edited);
+                        GLib.Process.spawn_command_line_async("flatpak-spawn --host xrandr --output " + monitors[0] + " --brightness " + edited);
                         
                         saveValue(".dimmer_" + monitors[0] + ".txt", edited);
 
@@ -166,7 +166,7 @@ public class Dimmer :  Gtk.Application {
                 try {
                         string edited = (slider2.adjustment.value / 100).to_string();
 
-                       GLib.Process.spawn_command_line_async("xrandr --output " + monitors[1] + " --brightness " + edited);
+                       GLib.Process.spawn_command_line_async("flatpak-spawn --host  xrandr --output " + monitors[1] + " --brightness " + edited);
                        
                        saveValue(".dimmer_" + monitors[1] + ".txt", edited);
 
@@ -187,7 +187,7 @@ public class Dimmer :  Gtk.Application {
                 try {
                         string edited = (slider3.adjustment.value / 100).to_string();
 
-                        GLib.Process.spawn_command_line_async("xrandr --output " + monitors[2] + " --brightness " + edited);
+                        GLib.Process.spawn_command_line_async("flatpak-spawn --host xrandr --output " + monitors[2] + " --brightness " + edited);
                         
                         saveValue(".dimmer_" + monitors[2] + ".txt", edited);
 
@@ -208,7 +208,7 @@ public class Dimmer :  Gtk.Application {
                 try {
                         string edited = (slider4.adjustment.value / 100).to_string();
 
-                        GLib.Process.spawn_command_line_async("xrandr --output " + monitors[3] + " --brightness " + edited);
+                        GLib.Process.spawn_command_line_async("flatpak-spawn --host xrandr --output " + monitors[3] + " --brightness " + edited);
                         
                        saveValue(".dimmer_" + monitors[3] + ".txt", edited);
 
@@ -231,7 +231,7 @@ public class Dimmer :  Gtk.Application {
             try {
                     string edited = (slider.adjustment.value / 100).to_string();
 
-                    for (int i = 0; i < lines.size; i++) GLib.Process.spawn_command_line_async("xrandr --output " + lines.get(i) + " --brightness " + edited);
+                    for (int i = 0; i < lines.size; i++) GLib.Process.spawn_command_line_async("flatpak-spawn --host xrandr --output " + lines.get(i) + " --brightness " + edited);
 
                     saveValue(".dimmer_all_monitors.txt", edited);
 
@@ -298,7 +298,7 @@ public class Dimmer :  Gtk.Application {
         string edited = dprevValue.to_string();
             
         try {    
-            for (int i = 0; i < lines.size; i++) GLib.Process.spawn_command_line_async("xrandr --output " + lines.get(i) + " --brightness " + edited);
+            for (int i = 0; i < lines.size; i++) GLib.Process.spawn_command_line_async("flatpak-spawn --host xrandr --output " + lines.get(i) + " --brightness " + edited);
         } catch (SpawnError se) {}
     }
     
@@ -333,7 +333,7 @@ public class Dimmer :  Gtk.Application {
                 string edited = dprevValue.to_string();
                 
                 try {
-                    GLib.Process.spawn_command_line_async("xrandr --output " + monitors[i] + " --brightness " + edited);
+                    GLib.Process.spawn_command_line_async("flatpak-spawn --host xrandr --output " + monitors[i] + " --brightness " + edited);
                 } catch (SpawnError se) {}
             }
         }
