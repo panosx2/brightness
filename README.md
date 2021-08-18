@@ -44,7 +44,14 @@
  ```
  sudo apt install meson valac libgranite-dev libgtk-3-dev libgee-0.8-dev gettext debhelper
  ```
- 
+
+<p>Flatpak dependencies:</p>
+
+ ```
+ sudo apt install elementary-sdk \
+ && sudo flatpak install -y appcenter io.elementary.Platform io.elementary.Sdk
+ ```
+
  <br>
  <b>Building</b>
  
@@ -65,7 +72,7 @@ sudo ninja install
 <b>Flatpak Building & Installing</b>
 
 ```
-flatpak-builder build  com.github.panosx2.brightness.yml --user --install --force-clean
+flatpak-builder build com.github.panosx2.brightness.yml --user --install --force-clean
 ```
 
  ## Credits
